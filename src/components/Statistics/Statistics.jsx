@@ -1,4 +1,6 @@
-const Statistics = ({ title, stats}) => {
+import PropTypes from 'prop-types';
+
+const Statistics = ({ title, stats }) => {
     return <section className="statistics">
         {/* <h2 className="title">Upload stats</h2> */}
         {title && <h2 className="title">Upload stats</h2>}
@@ -33,5 +35,13 @@ const Statistics = ({ title, stats}) => {
 // function getRandomHexColor() {
 //   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 // }
+
+Statistics.propTypes = {
+  el: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  ),
+};
 
 export default Statistics;

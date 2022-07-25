@@ -1,4 +1,4 @@
-// import user from '../user.json';
+import PropTypes from 'prop-types';// import user from '../user.json';
 
 const Profile = ({
   username,
@@ -35,5 +35,13 @@ const Profile = ({
   </ul>
 </div>
 }
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+};
 
 export default Profile;

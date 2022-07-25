@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const FriendList = ({ friends }) => {
   return  <ul className="friend-list">
     {friends.map(friend => (
@@ -15,6 +17,14 @@ const FriendList = ({ friends }) => {
   </ul>;
 
 
+};
+
+FriendList.propTypes = {
+  friend: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 export default FriendList;
