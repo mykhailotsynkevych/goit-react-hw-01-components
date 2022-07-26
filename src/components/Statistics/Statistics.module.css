@@ -1,0 +1,22 @@
+.statistics {
+    margin: 15px;
+    width: 354px;
+    
+}
+
+.statList {
+    display: flex;
+    
+}
+
+.statList li {
+    padding: 10px 16.5px;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.percentage {
+        font-weight: bold;
+            font-size: 20px;
+}
