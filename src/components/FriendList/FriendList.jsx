@@ -6,16 +6,12 @@ const FriendList = ({ friends }) => {
   return (
     <ul className={s.friendList}>
       {friends.map(friend => (
-        <li
-          className={s.item}
-          key={friend.id}
-          style={{backgroundColor: !friend.isOnline && 'rgba(255, 0, 0, 0.638)'}}>
-          <FriendEl
+        <FriendEl
+            id={friend.id}
             isOnline={friend.isOnline}
             avatar={friend.avatar}
             name={friend.name}
           />
-        </li>
       ))}
     </ul>
   );
